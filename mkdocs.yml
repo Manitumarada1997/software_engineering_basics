@@ -1,6 +1,6 @@
 site_name: Software Engineering Basics
 site_description: A continuous-story course on modern software engineering, DevOps, Cloud, Kubernetes, Security, SRE, and Platform Engineering.
-site_url: https://mani-devops-engineer.github.io/software_engineering_basics/
+site_url: https://manitumarada1997.github.io/software_engineering_basics/
 repo_url: https://github.com/Manitumarada1997/software_engineering_basics
 repo_name: software_engineering_basics
 copyright: Built as a public learning resource
@@ -54,7 +54,7 @@ extra_css:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/Manitumarada1997/software_engineering_basics
+      link: https://manitumarada1997.github.io/software_engineering_basics/
 
 markdown_extensions:
   - admonition
