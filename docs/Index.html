@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineering Basics</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #f8fafc;
+        }
+        h1 { font-size: 2.8rem; margin-bottom: 0.5rem; color: #0f172a; }
+        h2 { font-size: 1.8rem; margin-top: 3rem; margin-bottom: 1.5rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; color: #1e293b; }
+        .subtitle { font-size: 1.2rem; color: #475569; margin-bottom: 2rem; }
+        
+        .buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+        .button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+        }
+        .primary { background: #2563eb; color: white; }
+        .primary:hover { background: #1d4ed8; }
+        .secondary { background: #e2e8f0; color: #0f172a; }
+        .secondary:hover { background: #cbd5e1; }
+        
+        .stats {
+            display: flex; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap;
+            padding: 1.5rem; background: white; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .stat { text-align: center; flex: 1; min-width: 120px; }
+        .stat-number { font-size: 2.2rem; font-weight: 800; color: #2563eb; line-height: 1; }
+        .stat-label { font-size: 0.9rem; color: #64748b; text-transform: uppercase; font-weight: 600; margin-top: 0.5rem; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 4px solid #3b82f6;
+            transition: transform 0.2s;
+        }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .card h3 { margin-top: 0; display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; color: #0f172a; }
+        .card p { margin-bottom: 0; color: #475569; font-size: 0.95rem; }
+    </style>
+</head>
+<body>
+
+    <h1>Software Engineering Basics</h1>
+    <p class="subtitle">A complete, free course that turns practical DevOps experience into deep engineering understanding — from SDLC fundamentals to Kubernetes internals, distributed systems, and platform engineering. One continuous story. No disconnected definitions.</p>
+
+    <div class="buttons">
+        <a href="#" class="button primary">🚀 Start the course</a>
+        <a href="#" class="button secondary">🗺️ View the roadmap</a>
+        <a href="#" class="button secondary">📖 Jump to any topic</a>
+    </div>
+
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-number">13</div>
+            <div class="stat-label">Phases</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">170+</div>
+            <div class="stat-label">Deep-dive pages</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">2</div>
+            <div class="stat-label">Layers per concept</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">1</div>
+            <div class="stat-label">Continuous story</div>
+        </div>
+    </div>
+
+    <h2>How this course works</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>💡 Why before what</h3>
+            <p>Every concept starts with the real-world problem that made it exist — then goes deep: internals, tradeoffs, failure modes, and production considerations.</p>
+        </div>
+        <div class="card">
+            <h3>🍩 Two layers everywhere</h3>
+            <p>First a simple explanation with analogies anyone can follow. Then the Engineer layer — architecture, security, scalability, and cost.</p>
+        </div>
+        <div class="card">
+            <h3>🔗 One connected story</h3>
+            <p>Git explains CI. CI explains CD. Linux namespaces explain containers. Containers explain Kubernetes. Every page links backward and forward through the journey.</p>
+        </div>
+        <div class="card">
+            <h3>🎓 Built to remember</h3>
+            <p>Mental models, "Remember This" summaries, flashcard-style knowledge checks, and scenario questions — designed for long-term retention, not memorization.</p>
+        </div>
+    </div>
+
+    <h2>Explore the course</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>🔀 Software Engineering</h3>
+            <p>SDLC, Waterfall → Agile, Scrum, Kanban, XP — how ideas become working software.</p>
+        </div>
+        <div class="card">
+            <h3>📄 Development Practices</h3>
+            <p>Git internals, branching, code review, testing pyramid, TDD/BDD, feature flags.</p>
+        </div>
+        <div class="card">
+            <h3>♾️ CI/CD & Artifacts</h3>
+            <p>Build automation, integration, artifact repositories, deployment strategies.</p>
+        </div>
+        <div class="card">
+            <h3>🐧 Linux Deep Foundations</h3>
+            <p>Processes, memory, networking, namespaces, cgroups — build a container by hand.</p>
+        </div>
+        <div class="card">
+            <h3>🌐 Networking</h3>
+            <p>TCP/IP, DNS, HTTP, TLS, load balancers, CDNs, API gateways.</p>
+        </div>
+        <div class="card">
+            <h3>☁️ Cloud</h3>
+            <p>Service models, regions & AZs, VPCs, IAM, storage, HA/DR, multi-region.</p>
+        </div>
+        <div class="card">
+            <h3>🐳 Containers</h3>
+            <p>Images, layers, OCI standards, registries, container networking & storage.</p>
+        </div>
+        <div class="card">
+            <h3>☸️ Kubernetes</h3>
+            <p>Architecture, Pods, Deployments, Services, RBAC, autoscaling, operators.</p>
+        </div>
+        <div class="card">
+            <h3>💻 Infrastructure as Code</h3>
+            <p>Terraform, state & drift, Ansible, and GitOps with ArgoCD.</p>
+        </div>
+        <div class="card">
+            <h3>🛡️ Security & DevSecOps</h3>
+            <p>Identity, Zero Trust, PKI, supply chain, threat modeling, policy as code.</p>
+        </div>
+        <div class="card">
+            <h3>👁️ SRE & Observability</h3>
+            <p>Metrics, logs, traces, SLOs & error budgets, incidents, chaos engineering.</p>
+        </div>
+        <div class="card">
+            <h3>🏗️ Architecture</h3>
+            <p>Tradeoffs, distributed systems, CAP, Kafka, caching, HLD & LLD.</p>
+        </div>
+        <div class="card">
+            <h3>🎡 Platform Engineering</h3>
+            <p>Team Topologies, golden paths, internal developer platforms, Backstage.</p>
+        </div>
+        <div class="card">
+            <h3>🧠 AI Engineering</h3>
+            <p>From "why do LLMs exist?" to transformers, local inference, RAG, agents, MCP, and production AI.</p>
+        </div>
+        <div class="card">
+            <h3>🚀 Advanced Topics</h3>
+            <p>The CNCF landscape, FinOps, and AI engineering / LLMOps.</p>
+        </div>
+    </div>
+
+    <h2>Where to begin</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>🏁 New here?</h3>
+            <p>Read Start Here (2 minutes), then follow the Roadmap in order — it's designed as one story.</p>
+        </div>
+        <div class="card">
+            <h3>🔍 Looking for one topic?</h3>
+            <p>Use the search bar (⌘K / Ctrl+K) — every page is a standalone professional reference, cross-linked for discovery.</p>
+        </div>
+        <div class="card">
+            <h3>🏆 Want to test yourself?</h3>
+            <p>Go straight to The Capstone — design ShopEasy at 500 engineers and grade yourself against the rubric.</p>
+        </div>
+    </div>
+
+</body>
+</html>
