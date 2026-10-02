@@ -1,0 +1,292 @@
+site_name: Software Engineering for Dummies
+site_description: A continuous-story course on modern software engineering, DevOps, Cloud, Kubernetes, Security, SRE, and Platform Engineering.
+site_url: https://saran-devops-engineer.github.io/software_engineering_for_dummies/
+repo_url: https://github.com/saran-devops-engineer/software_engineering_for_dummies
+repo_name: saran-devops-engineer/software_engineering_for_dummies
+copyright: Built as a public learning resource
+
+theme:
+  name: material
+  favicon: assets/logo.svg
+  icon:
+    logo: material/book-open-variant
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    # Navigation
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.indexes
+    # Search
+    - search.suggest
+    - search.highlight
+    - search.share
+    # Content
+    - content.code.copy
+    - content.code.annotate
+    - content.tooltips
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/saran-devops-engineer/software_engineering_for_dummies
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
+  - def_list
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.critic
+  - pymdownx.keys
+
+nav:
+  - Home: index.md
+  - Start Here: start-here.md
+  - Roadmap: roadmap.md
+  - Software Engineering:
+    - software-engineering/index.md
+    - What is Software Engineering: software-engineering/software-engineering.md
+    - Application Lifecycle & SDLC: software-engineering/sdlc.md
+    - Requirements & Work Items: software-engineering/requirements-work-items.md
+    - Waterfall: software-engineering/waterfall.md
+    - Agile: software-engineering/agile.md
+    - Scrum: software-engineering/scrum.md
+    - Kanban: software-engineering/kanban.md
+    - XP, Lean & SAFe: software-engineering/xp-lean-safe.md
+  - Development Practices:
+    - development-practices/index.md
+    - Git Internals: development-practices/git-internals.md
+    - Branching Strategies: development-practices/branching-strategies.md
+    - Trunk-Based Development: development-practices/trunk-based.md
+    - Code Review: development-practices/code-review.md
+    - Semantic Versioning: development-practices/versioning.md
+    - The Testing Pyramid: development-practices/testing-pyramid.md
+    - TDD & BDD: development-practices/tdd-bdd.md
+    - Performance & Security Testing: development-practices/perf-security-testing.md
+    - Shift Left / Shift Right: development-practices/shift-left-right.md
+    - Feature Flags: development-practices/feature-flags.md
+  - CI/CD:
+    - cicd/index.md
+    - Build Automation: cicd/build-automation.md
+    - Continuous Integration: cicd/continuous-integration.md
+    - Artifact Repositories: cicd/artifact-repositories.md
+    - Continuous Delivery & Deployment: cicd/continuous-delivery.md
+    - Deployment Strategies: cicd/deployment-strategies.md
+    - Pipeline as Product: cicd/pipeline-as-product.md
+  - Linux:
+    - linux/index.md
+    - Processes & Threads: linux/processes-threads.md
+    - Memory: linux/memory.md
+    - Filesystems & Permissions: linux/filesystems-permissions.md
+    - Linux Networking: linux/networking.md
+    - systemd: linux/systemd.md
+    - Logs & Troubleshooting: linux/logs-troubleshooting.md
+    - Namespaces: linux/namespaces.md
+    - cgroups: linux/cgroups.md
+    - "Lab: Container by Hand": projects/lab-container-by-hand.md
+  - Networking:
+    - networking/index.md
+    - OSI & TCP/IP: networking/osi-tcpip.md
+    - IP, Subnets & Routing: networking/ip-routing.md
+    - DNS, DHCP & NAT: networking/dns-dhcp-nat.md
+    - HTTP & HTTPS: networking/http-https.md
+    - TLS & Certificates: networking/tls-certificates.md
+    - Proxies & Load Balancers: networking/proxies-load-balancers.md
+    - Firewalls & VPNs: networking/firewalls-vpns.md
+    - CDN: networking/cdn.md
+    - API Gateway: networking/api-gateway.md
+  - Cloud:
+    - cloud/index.md
+    - What Cloud Really Is: cloud/cloud-fundamentals.md
+    - IaaS, PaaS, SaaS, Serverless: cloud/service-models.md
+    - Regions & Availability Zones: cloud/regions-az.md
+    - VPC / VNet: cloud/vpc-vnet.md
+    - Cloud IAM: cloud/iam.md
+    - Compute Options: cloud/compute.md
+    - Storage & Databases: cloud/storage-databases.md
+    - Load Balancing & Autoscaling: cloud/lb-autoscaling.md
+    - HA & Disaster Recovery: cloud/ha-dr.md
+    - Multi-Region & Multi-Cloud: cloud/multi-region-cloud.md
+  - Containers:
+    - containers/index.md
+    - Containers: containers/containers.md
+    - Docker & Images: containers/docker-images.md
+    - OCI & Runtimes: containers/oci-runtimes.md
+    - Registries: containers/registries.md
+    - Container Networking & Storage: containers/networking-storage.md
+  - Kubernetes:
+    - kubernetes/index.md
+    - Why Orchestration: kubernetes/why-orchestration.md
+    - Kubernetes Architecture: kubernetes/architecture.md
+    - Pods: kubernetes/pods.md
+    - Deployments & ReplicaSets: kubernetes/deployments.md
+    - Services & Ingress: kubernetes/services-ingress.md
+    - ConfigMaps, Secrets & Volumes: kubernetes/config-secrets.md
+    - StatefulSets, DaemonSets, Jobs: kubernetes/workloads.md
+    - Namespaces, RBAC & Network Policies: kubernetes/rbac-policies.md
+    - Autoscaling & Scheduling: kubernetes/autoscaling.md
+    - Helm & Operators: kubernetes/helm-operators.md
+    - Kubernetes Troubleshooting: kubernetes/troubleshooting.md
+  - Infrastructure as Code:
+    - iac/index.md
+    - IaC Fundamentals: iac/iac-fundamentals.md
+    - Terraform: iac/terraform.md
+    - OpenTofu & Pulumi: iac/opentofu-pulumi.md
+    - Ansible: iac/ansible.md
+    - Drift & Lifecycle: iac/drift-lifecycle.md
+    - GitOps: iac/gitops.md
+  - Security & DevSecOps:
+    - security/index.md
+    - CIA Triad & AuthN/AuthZ: security/cia-authn-authz.md
+    - RBAC & ABAC: security/rbac-abac.md
+    - OAuth 2.0, OIDC & SAML: security/oauth-oidc-saml.md
+    - Zero Trust: security/zero-trust.md
+    - PKI & Encryption: security/pki-encryption.md
+    - Secrets Management & Vault: security/secrets-vault.md
+    - Network Security: security/network-security.md
+    - Cloud Security: security/cloud-security.md
+    - K8s & Container Security: security/k8s-container-security.md
+    - SAST, DAST & SCA: security/sast-dast-sca.md
+    - SBOM & Supply Chain: security/sbom-supply-chain.md
+    - Vulnerability Management: security/vulnerability-management.md
+    - Threat Modeling: security/threat-modeling.md
+    - Policy as Code: security/policy-as-code.md
+  - SRE & Observability:
+    - sre/index.md
+    - Monitoring vs Observability: sre/observability.md
+    - Metrics & Golden Signals: sre/metrics.md
+    - Logging: sre/logging.md
+    - Tracing & OpenTelemetry: sre/tracing-otel.md
+    - Prometheus & Grafana: sre/prometheus-grafana.md
+    - Alerting: sre/alerting.md
+    - SLI, SLO & Error Budgets: sre/slo-error-budgets.md
+    - Incident Management: sre/incident-management.md
+    - Postmortems: sre/postmortems.md
+    - Capacity Planning: sre/capacity-planning.md
+    - Chaos Engineering: sre/chaos-engineering.md
+  - Architecture:
+    - architecture/index.md
+    - Architecture Thinking & Tradeoffs: architecture/thinking-tradeoffs.md
+    - Non-Functional Requirements: architecture/nfrs.md
+    - Monolith → Microservices: architecture/monolith-microservices.md
+    - Distributed Systems Fundamentals: architecture/distributed-fundamentals.md
+    - CAP & Consistency: architecture/cap-consistency.md
+    - Event-Driven & Kafka: architecture/event-driven-kafka.md
+    - Caching: architecture/caching.md
+    - Replication & Sharding: architecture/replication-sharding.md
+    - API Design: architecture/api-design.md
+    - Design Patterns & ADRs: architecture/patterns-adrs.md
+    - High-Level Design: architecture/hld.md
+    - Low-Level Design: architecture/lld.md
+  - Platform Engineering:
+    - platform-engineering/index.md
+    - Why Platform Engineering: platform-engineering/why-platform-engineering.md
+    - Team Topologies: platform-engineering/team-topologies.md
+    - DX & Golden Paths: platform-engineering/dx-golden-paths.md
+    - IDP & Backstage: platform-engineering/idp-backstage.md
+    - Platform as Product & Metrics: platform-engineering/platform-as-product.md
+  - Advanced Topics:
+    - advanced/index.md
+    - CNCF & Cloud-Native: advanced/cncf-cloud-native.md
+    - FinOps: advanced/finops.md
+    - AI for DevOps & LLMOps: advanced/ai-devops-llmops.md
+  - AI Engineering:
+    - ai-engineering/index.md
+    - What Is Intelligence: ai-engineering/what-is-intelligence.md
+    - From Calculators to Learning: ai-engineering/from-calculators-to-learning-machines.md
+    - Probability & Prediction: ai-engineering/probability-and-prediction.md
+    - What Is a Model: ai-engineering/what-is-a-model.md
+    - What Is Learning: ai-engineering/what-is-learning.md
+    - Neural Networks: ai-engineering/neural-networks.md
+    - The Deep Learning Era: ai-engineering/deep-learning-era.md
+    - Teaching Machines Language: ai-engineering/teaching-machines-language.md
+    - Word Embeddings: ai-engineering/word-embeddings.md
+    - RNNs & LSTMs: ai-engineering/rnns-and-lstms.md
+    - Attention: ai-engineering/attention.md
+    - Transformers: ai-engineering/transformers.md
+    - Scaling Laws: ai-engineering/scaling-laws.md
+    - AI Roadmap: ai-engineering/roadmap.md
+    - Tokens: ai-engineering/tokens.md
+    - How LLMs Generate Text: ai-engineering/how-llms-generate.md
+    - Training an LLM: ai-engineering/training-an-llm.md
+    - Alignment: ai-engineering/alignment.md
+    - The Limits of LLMs: ai-engineering/limits-of-llms.md
+    - Open & Closed Models: ai-engineering/open-and-closed-models.md
+    - How Inference Works: ai-engineering/how-inference-works.md
+    - Hardware for AI: ai-engineering/hardware-for-ai.md
+    - Quantization: ai-engineering/quantization.md
+    - Running Models Locally: ai-engineering/running-models-locally.md
+    - Serving at Scale: ai-engineering/serving-at-scale.md
+    - Prompt Engineering: ai-engineering/prompt-engineering.md
+    - Context Engineering: ai-engineering/context-engineering.md
+    - Structured Outputs: ai-engineering/structured-outputs.md
+    - Tool Calling: ai-engineering/tool-calling.md
+    - RAG: ai-engineering/rag.md
+    - Evals: ai-engineering/evals.md
+    - Guardrails: ai-engineering/guardrails.md
+    - Agents: ai-engineering/agents.md
+    - Agentic Systems: ai-engineering/agentic-systems.md
+    - Agent Loops: ai-engineering/agent-loops.md
+    - Graphs: ai-engineering/graphs.md
+    - Harnesses: ai-engineering/harnesses.md
+    - Memory: ai-engineering/memory.md
+    - Multi-Agent: ai-engineering/multi-agent.md
+    - MCP: ai-engineering/mcp.md
+    - Coding Agents: ai-engineering/coding-agents.md
+    - AI Architecture: ai-engineering/ai-architecture.md
+    - AI Observability: ai-engineering/ai-observability.md
+    - AI Security: ai-engineering/ai-security.md
+    - AI Cost: ai-engineering/ai-cost.md
+    - AI Reliability: ai-engineering/ai-reliability.md
+    - Fine-tuning: ai-engineering/fine-tuning.md
+    - LLMOps: ai-engineering/llmops.md
+    - AI Workflow: ai-engineering/ai-workflow.md
+    - AI + DevOps: ai-engineering/ai-for-devops.md
+    - Capstone: ai-engineering/capstone-shopeasy-assistant.md
+  - Projects:
+    - projects/index.md
+    - "Lab: Container by Hand": projects/lab-container-by-hand.md
+    - The Capstone: projects/capstone.md
+  - Cheat Sheets: cheat-sheets/index.md
+  - Glossary: glossary.md
