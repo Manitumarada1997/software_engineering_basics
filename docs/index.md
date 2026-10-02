@@ -6,7 +6,7 @@ hide:
 
 <div class="hero" markdown>
 
-# Software Engineering for Dummies
+# Software Engineering Basics
 
 <p class="hero-sub" markdown>
 A complete, free course that turns practical DevOps experience into deep engineering
