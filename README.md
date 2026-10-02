@@ -1,10 +1,10 @@
-# Software Engineering for Dummies
+# Software Engineering Basics
 
 A continuous-story course on modern software engineering, DevOps, Cloud, Kubernetes,
 Security, SRE, and Platform Engineering — written for engineers with hands-on experience
 who want deep understanding, not definitions.
 
-**Read the site:** https://saran-devops-engineer.github.io/software_engineering_for_dummies/
+**Read the site:** https://mani-devops-engineer.github.io/software_engineering_basics/
 
 ## Structure
 
